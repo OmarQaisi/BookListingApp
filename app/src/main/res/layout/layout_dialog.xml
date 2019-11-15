@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10sp"
+    app:cardElevation="20sp"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground">
+
+        <ImageView
+            android:id="@+id/dialog_img"
+            android:layout_width="128dp"
+            android:layout_height="180dp"
+            android:layout_below="@+id/dialog_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/content" />
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:onClick="canclePopup"
+            android:src="@drawable/ic_cancel_black_24dp" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/cancel"
+            android:text="Harry Potter"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/dialog_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_title"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/dialog_img"
+            android:layout_toRightOf="@+id/dialog_img"
+            android:text="by JK. Rowling"
+            android:textColor="#95ffffff"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/dialog_rating"
+            style="@android:style/Widget.Material.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_author"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/dialog_img"
+            android:numStars="5"
+            android:progressTint="@color/gold"
+            android:rating="4.5" />
+
+        <TextView
+            android:id="@+id/dialog_rating_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_author"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/dialog_rating"
+            android:text="(14)"
+            android:textColor="#95ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dialog_catogry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dialog_pageCount"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/dialog_img"
+            android:text="Fictional"
+            android:textColor="#95ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dialog_pageCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/dialog_publishDate"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@id/dialog_img"
+            android:text="328 Pages"
+            android:textColor="#95ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dialog_publishDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dialog_divider"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/dialog_img"
+            android:text="Published Date: 2002"
+            android:textColor="#95ffffff"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/dialog_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/dialog_img"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/dialog_disc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_divider"
+            android:layout_marginTop="8dp"
+            android:maxLines="5"
+            android:padding="4dp"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideOverlay"
+            android:fadeScrollbars="true"
+            android:fadingEdge="vertical"
+            android:text="This volume presents a review of current research on the relationships between dietary intake, growth, physical activity and exercise in different environments throughout the world, and their impact on health and physical fitness. The combined influence of heredity and environment on the potential for growth and functional development has been hotly debated for many years. Amongst the more critical environmental factors commonly considered are nutrition, physical activity and motor stimulation. This book examines how these factors affect the growth and development of children and youth in developed and developing countries. Characteristics of children from Africa, the Indian sub-continent, Europe, Australia, and North and South America are presented by leading exponents of work in these areas. The contents provide new insights on positive health and optimal somatic and functional development during childhood. It will be of interest to a wide range of scientists and health professionals including pedagogues, exercise physiologists, pediatricians, auxologists, nutritionists, dietitians, anthropologists, human biologists and other medical practitioners."
+            android:textColor="#80ffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_disc"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@color/gold"
+                android:textStyle="bold"
+                android:text="BUY" />
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="canclePopup"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:text="CANCEL"
+                android:textColor="@color/gold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
